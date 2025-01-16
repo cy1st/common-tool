@@ -16,59 +16,6 @@ import java.util.Map;
  */
 public class TreeTool {
 
-    public static void main(String[] args) {
-        List<Map<String, Object>> list = new ArrayList<>();
-        HashMap<String, Object> m1 = new HashMap<>();
-        m1.put("id", 0);
-        m1.put("pId", 0);
-        m1.put("value", "test");
-        HashMap<String, Object> m2 = new HashMap<>();
-        m2.put("id", 1);
-        m2.put("pId", 0);
-        m2.put("value", "test");
-        HashMap<String, Object> m3 = new HashMap<>();
-        m3.put("id", 2);
-        m3.put("pId", 1);
-        m3.put("value", "test");
-        HashMap<String, Object> m4 = new HashMap<>();
-        m4.put("id", 3);
-        m4.put("pId", 2);
-        m4.put("value", "test");
-        HashMap<String, Object> m5 = new HashMap<>();
-        m5.put("id", 4);
-        m5.put("pId", 1);
-        m5.put("value", "test");
-        HashMap<String, Object> m6 = new HashMap<>();
-        m6.put("id", 5);
-        m6.put("pId", 4);
-        m6.put("value", "test");
-        HashMap<String, Object> m7 = new HashMap<>();
-        m7.put("id", 6);
-        m7.put("pId", 1);
-        m7.put("value", "test");
-        HashMap<String, Object> m8 = new HashMap<>();
-        m8.put("id", 8);
-        m8.put("pId", 0);
-        m8.put("value", "test");
-        HashMap<String, Object> m9 = new HashMap<>();
-        m9.put("id", 9);
-        m9.put("pId", 8);
-        m9.put("value", "test");
-        list.add(m1);
-        list.add(m2);
-        list.add(m3);
-        list.add(m4);
-        list.add(m5);
-        list.add(m6);
-        list.add(m7);
-        list.add(m8);
-        list.add(m9);
-        TreeTool treeTool = new TreeTool(list, "0");
-        List<Map<String, Object>> trees = treeTool.initTreeList();
-        System.out.println(JSONArray.toJSONString(trees));
-
-    }
-
     private String childrenKey = "id";
     private String parentKey = "pId";
     private String childrenListKey = "children";
